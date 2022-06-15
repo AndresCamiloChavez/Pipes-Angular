@@ -14,32 +14,30 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-        label: 'File',
-        items: [
+        label:'Pipes de Angular',
+        icon: PrimeIcons.DESKTOP,
+        items:[
           {
-            label: 'New',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project',
-            items: [
-              { label: 'Other' } 
-            ],
-            icon: PrimeIcons.AMAZON,
-
-          }, { label: 'Other' }],
+            label: 'Textos y fechas',
+            icon: PrimeIcons.ARROW_LEFT,
+            routerLink: 'basicos'
           },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
+          {
+            label: 'Numeros',
+            icon: PrimeIcons.DOLLAR,
+            routerLink: 'numeros'
+          },
+          {
+            label: 'No comunes',
+            icon: PrimeIcons.GLOBE,
+            routerLink: 'no-comunes'
+          }
+        ]
+      },{
+        label: 'Pipes personalizados',
+        icon: PrimeIcons.COG
 
-      },
-      {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
-        items: [
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
-          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' },
-        ],
-      },
+      }
     ];
   }
 }

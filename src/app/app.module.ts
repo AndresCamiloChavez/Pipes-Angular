@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // import {ButtonModule} from 'primeng/button';
 // import {CardModule} from 'primeng/card';
 import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    AppRouterModule,
+    SharedModule,
     // ButtonModule,
     // CardModule
   ],
