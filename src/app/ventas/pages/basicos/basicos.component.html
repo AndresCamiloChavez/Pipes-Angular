@@ -42,6 +42,17 @@
         <li>Fecha | date:'long'</li>
         <li>fecha | date:'MMMM-d-yyy'</li>
       </ul>
+      <hr>
+      <ul>
+        <li>
+            fecha | date:'long'
+        </li>
+        <li>fecha | date:'long':'GMT-6'</li>
+        <li>fecha | date:'long':'GMT-4'</li>
+      </ul>
+
+
+
     </p-card>
   </div>
   <div class="col-6">
@@ -55,11 +66,20 @@
         </li>
         <li>
           {{ fecha | date:'short'}}
+        </li>  
+        <li>
+          {{ fecha | date:'long'}}
         </li>
         <li>
           {{ fecha | date:'MMMM-d-yyy'}}
         </li>
-
+      </ul>
+      <hr>
+      <ul>
+        <li>{{fecha | date:'long':'GMT-6'}}</li>
+        <li>{{fecha | date:'long':'GMT-4'}}</li>
+        <!-- enviar con diferentes argumentos -->
+        <li>{{fecha | date:'long':'': 'br'}}</li>
       </ul>
     </p-card>
   </div>
