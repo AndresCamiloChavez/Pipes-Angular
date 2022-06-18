@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-no-comunes',
@@ -7,9 +8,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoComunesComponent implements OnInit {
 
-  constructor() { }
+
+  //! i18nSelect
+  nombre: string = 'Andres';
+  genero: string = 'masculino';
+
+  invitacionMapa = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
+  }
+
+  //! i18nPlural
+
+  clientes: string[] = ['María', 'Pedro', 'Juan'];
+  clientesMap = {
+    '=0': 'no tenemos ningún cliente esperando',
+    '=1': 'tenemos un cliente esperando',
+    'other':`tenemos #  clientes esperando`
+  }
+  constructor(private primengConfig: PrimeNGConfig) { }
+
+
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true; 
+  }
+  cambiarCliente(){
+    this.nombre = "Camila";
+    this.genero = 'femenino'
+  }
+  borrarCliente(){
+    this.clientes.pop();
+  }
+  
+  //keyValue Pipe
+
+  persona = {
+    nombre: 'Andres',
+    edad: 35,
+    direccion: 'Bogotá'
   }
 
 }

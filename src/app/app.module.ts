@@ -16,6 +16,8 @@ import { registerLocaleData } from "@angular/common";
 registerLocaleData(localeEs);
 registerLocaleData(localeBr);
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,7 +26,8 @@ registerLocaleData(localeBr);
     BrowserModule,
     AppRouterModule,
     SharedModule,
-    VentasModule
+    VentasModule,
+    BrowserAnimationsModule
     // ButtonModule,
     // CardModule
   ],
