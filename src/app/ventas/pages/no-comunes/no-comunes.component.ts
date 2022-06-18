@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -49,4 +50,27 @@ export class NoComunesComponent implements OnInit {
     direccion: 'Bogotá'
   }
 
+  //Json Pipe
+
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },{
+      nombre: 'Robin',
+      vuela: false
+    },{
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ]
+
+  //! Async Pipe
+  miObservable = interval(5000);
+
+  valorPromesa = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+      resolve('Tenemos data de la promesa')
+    }, 3500);
+  })
 }
