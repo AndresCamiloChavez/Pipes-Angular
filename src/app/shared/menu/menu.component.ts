@@ -35,7 +35,8 @@ export class MenuComponent implements OnInit {
         ]
       },{
         label: 'Pipes personalizados',
-        icon: PrimeIcons.COG
+        icon: PrimeIcons.COG,
+        routerLink: 'ordenar'
 
       }
     ];

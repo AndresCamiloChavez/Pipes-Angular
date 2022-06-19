@@ -27,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRouterModule,
     SharedModule,
     VentasModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
     // ButtonModule,
     // CardModule
   ],
