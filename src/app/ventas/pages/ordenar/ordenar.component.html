@@ -1,28 +1,48 @@
 <p-toolbar>
-    <div class="p-toolbar-group-left">
-        <p-button label="New" icon="pi pi-plus"></p-button>
-        <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
-            
-        <i class="pi pi-bars"></i>
-        
-    </div>
-    
-    <div class="p-toolbar-group-right">
-        <p-button icon="pi pi-search"></p-button>
-        <p-button icon="pi pi-calendar" styleClass="p-button-success"></p-button>
-        <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
-    </div>
+  <div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>Pipes creados por {{ "nosotros" | mayusculas: enMayusculas }}</p>
+  </div>
+  <div class="p-toolbar-group-left"></div>
+  <div class="p-toolbar-group-right">
+    <button
+      pButton
+      pRipple
+      type="button"
+      [label]="enMayusculas.toString() | i18nSelect: mapMayusculas"
+      class="p-button-outlined p-button-success mr-2"
+      (click)="enMayusculas = !enMayusculas"
+    ></button>
+    <button pButton icon="pi pi-sort" label="Por Nombre" class="mr-1"></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Valores"
+      class="mr-2 p-button-success"
+    ></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por color"
+      class="mr-2 p-button-help"
+    ></button>
+  </div>
 </p-toolbar>
-<div class="text-layout">
-  <h1>Pipes personalizados</h1>
-  <p>Pipes creados por {{ "nosotros" | mayusculas: enMayusculas }}</p>
 
-  <button
-    pButton
-    pRipple
-    type="button"
-    [label]="enMayusculas.toString() | i18nSelect:mapMayusculas"
-    class="p-button-outlined p-button-success"
-    (click)="enMayusculas = !enMayusculas"
-  ></button>
-</div>
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>

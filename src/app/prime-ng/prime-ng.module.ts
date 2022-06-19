@@ -4,6 +4,7 @@ import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
 import {FieldsetModule} from 'primeng/fieldset';
+import {ToolbarModule} from 'primeng/toolbar';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,9 @@ import {FieldsetModule} from 'primeng/fieldset';
     ButtonModule,
     CardModule,
     MenubarModule,
-    FieldsetModule
+    FieldsetModule,
+    ToolbarModule
+    
   ]
 })
 export class PrimeNgModule { }
